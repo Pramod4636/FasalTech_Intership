@@ -12,3 +12,5 @@ const multipy = (num) => { console.log(2*num);}
 console.log(multipy(3));
 
 console.log(abc(35,4));
+
+
