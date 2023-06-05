@@ -39,3 +39,22 @@ class Person extends Human{
 const person = new Person();
 person.printMyName();
 person.printGender();
+
+const numbers = [1,2,3,4] ;
+const newnumber = [...numbers,5,6];
+console.log(numbers,newnumber);
+
+const fun1 = (...arg) => {
+    for( let i = 0 ; i < arg.length ; ++i )
+      console.log(arg[i]," ");
+}
+
+fun1(12,3,43,5,6,7);
+fun1(3,5);
+
+// Distructuring array : (unpacing )
+
+const number = [1,2,3];
+const [num1,,num3] = number;
+
+console.log("distrucing array : ", num1,num3);
