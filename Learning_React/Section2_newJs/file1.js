@@ -58,3 +58,16 @@ const number = [1,2,3];
 const [num1,,num3] = number;
 
 console.log("distrucing array : ", num1,num3);
+
+// Refence and primitive types : 
+const pers = {
+    name : "max"
+}
+const sec_pers = pers;
+pers.name = "min";
+console.log(sec_pers.name);
+
+const arr  = [ 3,4,5,6,7] ;
+
+arr.map( (e) => {console.log(e);})
+
