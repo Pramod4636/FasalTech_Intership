@@ -3,6 +3,7 @@ import './f2.css';
 
 const ExpenseForm = () => {
    
+
    const [userInput,setUserInput] = useState({
     enteredTitle :'',
     enteredAmount : '',
@@ -15,7 +16,7 @@ const ExpenseForm = () => {
         //setUserInput({...userInput,"enteredTitle" : event.target.value});
         setUserInput( (prevState) =>{
             return {...prevState,"enteredTitle" : event.target.value}
-            
+
         })
         console.log(userInput);
 
@@ -31,8 +32,17 @@ const ExpenseForm = () => {
     setUserInput({...userInput,"enteredDate" : event.target.value});
    }
 
+  const submitHandler = (event)=>{
+    event.preventDefault();
+    const expenseDate = {
+        title : userInput.enteredTitle,
+        amount : userInput.enteredAmount,
+        date   : userInput.enteredDate
+    }
+    console.log(expenseDate);
+  }
   return (
-   <form >
+   <form onSubmit = {submitHandler}>
     <div className='new-expense__controls'>
     <div className = "new-expense__control">
       <label >Title</label>
@@ -44,7 +54,7 @@ const ExpenseForm = () => {
     </div>
     <div className = "new-expense__control">
       <label >Date</label>
-        <input type="date" min='2019-01-01' max = '2022-12-31' onchange = {dateChangeHandler}/>
+        <input type="date"  onchange = {dateChangeHandler}/>
     </div>
     <div className='new-expense__actions'>
         <button type ="submit">Add Expense</button>
