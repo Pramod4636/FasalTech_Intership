@@ -11,6 +11,7 @@ const ExpenseItem = (props) => {
     alert("Changing Title ");
     setTitle("Updated!");
   }
+  // usestate brief. 
 
   return ( <div className = "expense-item">
       <ExpenseDate date = {props.date} />
