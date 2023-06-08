@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from '../../UI/Button/Button';
 import './CourseInput.css';
 
+// Daynmicaly update CSS using inline css  
 const CourseInput = props => {
   const [enteredValue, setEnteredValue] = useState('');
   const [isValid,setisValid] = useState(true);
